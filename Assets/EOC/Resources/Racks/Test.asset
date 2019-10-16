@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Modules:
   - {fileID: 7286975363274264054}
-  active: 1
+  active: 0
   ScrollPosition: {x: 0, y: 0}
   Zoom: 1
 --- !u!114 &7286975363274264054
@@ -30,11 +30,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Values:
-    keys: []
-    values: []
+    keys:
+    - Folder
+    - Output
+    - ImageA
+    - ImageB
+    - Blend
+    - ImageScale
+    - Glow
+    - NoiseIntensity
+    - Speed
+    - Shards
+    - Warp
+    - WarpDirectionY
+    - NoiseFrequency
+    - NoiseScaleX
+    - NoiseScaleY
+    - WarpDirectionX
+    values:
+    - Discount
+    - -1
+    - -0.195
+    - 0.8
+    - 1
+    - 1
+    - -0.4
+    - -0.435
+    - -0.13
+    - 0.37
+    - -1
+    - -1
+    - -0.395
+    - 1
+    - 1
+    - 0.605
   Connections:
     Connections: []
   Rack: {fileID: 11400000}
   Position: {x: 0, y: 0}
-  output: 0
-  Folder: Name
+  output: -1
+  Folder: Discount
