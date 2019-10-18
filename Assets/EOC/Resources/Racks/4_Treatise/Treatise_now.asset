@@ -15,12 +15,46 @@ MonoBehaviour:
   Values:
     keys:
     - DisableUpdate
+    - MinX
+    - MaxX
+    - MinY
+    - MaxY
+    - MinZ
+    - MaxZ
+    - ScaleY
+    - ScaleX
+    - ScaleZ
+    - TranslationZ
+    - RotationZ
+    - RotationY
+    - RotationX
+    - TranslationX
+    - TranslationY
     values:
+    - -0.525
+    - -1
     - 1
+    - -1
+    - 1
+    - -1
+    - 1
+    - 1
+    - -1
+    - 1
+    - 0.02999998
+    - 0.795
+    - -0.785
+    - -0.41
+    - -0.115
+    - -0.005000003
   Connections:
-    Connections: []
+    Connections:
+    - Key: PointCloud
+      Value:
+        MemberName: PointCloud
+        Module: {fileID: -1227958922589174261}
   Rack: {fileID: 11400000}
-  Position: {x: 0, y: 0}
+  Position: {x: 3, y: 0}
   UpdateFrequency: 0
   MinX: -5
   MaxX: 5
@@ -28,18 +62,181 @@ MonoBehaviour:
   MaxY: 5
   MinZ: -5
   MaxZ: 5
-  RotationX: 0
-  RotationY: 0
-  RotationZ: 0
-  TranslationX: 0
-  TranslationY: 0
-  TranslationZ: 0
-  ScaleX: 1
-  ScaleY: 1
-  ScaleZ: 1
-  NewFrame: 1
+  RotationX: -73.8
+  RotationY: -141.3
+  RotationZ: 143.1
+  TranslationX: -0.575
+  TranslationY: -0.025000015
+  TranslationZ: -0.1499999
+  ScaleX: -10
+  ScaleY: 10
+  ScaleZ: 10
+  NewFrame: 0
   Address: 127.0.0.1
   Port: 48002
+--- !u!114 &-7375145089755582047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc29f172a19eba47beaa281a8a5c75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - InputZ
+    - Lag
+    - InputY
+    - InputX
+    - Lux
+    - Thickness
+    - ScrollRate
+    - NoiseIntensity
+    - NoiseScaleX
+    - NoiseScaleY
+    - Temperature
+    - CameraX
+    - CameraY
+    - LookAtZ
+    - LookAtY
+    - LookAtX
+    - CameraZ
+    - ProjectionFOV
+    - SceneFOV
+    - Value
+    - Strands
+    - SimulationSpeed
+    values:
+    - 0.675
+    - 0.9450001
+    - 1
+    - -0.07499999
+    - 0.215
+    - 0.08500005
+    - -1
+    - -1
+    - -0.18
+    - 1
+    - -1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - -0.595
+    - -0.045
+    - 0.025
+    - -0.575
+    - 1
+  Connections:
+    Connections: []
+  Rack: {fileID: 11400000}
+  Position: {x: 1, y: 0}
+  Target: {fileID: 0}
+  CameraGroup: {fileID: 0}
+  Projection: {fileID: 0}
+  ScrollRate: 0
+  CameraX: 21.062992
+  CameraY: 23.031496
+  CameraZ: -25
+  LookAtX: 10
+  LookAtY: 1.968504
+  LookAtZ: -4.1732283
+  Lag: 27.748106
+--- !u!114 &-5923397722798531050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771afe3e63b578c4e87570cf428a62ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Device
+    - Channel
+    values:
+    - Engine MIDI
+    - 1
+  Connections:
+    Connections:
+    - Key: A
+      Value:
+        MemberName: CameraX
+        Module: {fileID: -7375145089755582047}
+    - Key: B
+      Value:
+        MemberName: CameraY
+        Module: {fileID: -7375145089755582047}
+    - Key: C
+      Value:
+        MemberName: CameraZ
+        Module: {fileID: -7375145089755582047}
+    - Key: D
+      Value:
+        MemberName: LookAtX
+        Module: {fileID: -7375145089755582047}
+    - Key: E
+      Value:
+        MemberName: LookAtY
+        Module: {fileID: -7375145089755582047}
+    - Key: F
+      Value:
+        MemberName: LookAtZ
+        Module: {fileID: -7375145089755582047}
+  Rack: {fileID: 11400000}
+  Position: {x: 0, y: 0}
+  A: 0.8425197
+  B: 0.9212598
+  C: -1
+  D: 1
+  E: 0.19685039
+  F: -0.41732284
+--- !u!114 &-3889891193941872352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963f5396ac4ecde4fac82d67c7f48dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys: []
+    values: []
+  Connections:
+    Connections: []
+  Rack: {fileID: 11400000}
+  Position: {x: 0, y: 1}
+  Clock: 120
+  TrackA:
+    MemberName: TrackA
+    Module: {fileID: -3889891193941872352}
+    speedIndex: 0
+  TrackB:
+    MemberName: TrackB
+    Module: {fileID: -3889891193941872352}
+    speedIndex: 0
+  TrackC:
+    MemberName: TrackC
+    Module: {fileID: -3889891193941872352}
+    speedIndex: 0
+  TrackD:
+    MemberName: TrackD
+    Module: {fileID: -3889891193941872352}
+    speedIndex: 0
 --- !u!114 &-1227958922589174261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,13 +250,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Values:
-    keys: []
-    values: []
+    keys:
+    - Output
+    - SpawnRate
+    - Lifetime
+    - Size
+    - Glow
+    - Turbulence
+    - TurbulenceScaleX
+    - TurbulenceScaleY
+    - Noise
+    - ColorOffsetBlue
+    - TurbulenceScaleZ
+    - ColorOffsetRed
+    - ColorOffsetGreen
+    values:
+    - -1
+    - 0.77
+    - -0.365
+    - 0.46
+    - -0.2199999
+    - -1
+    - -0.1149999
+    - -0.12
+    - -1
+    - 0.035
+    - -0.24
+    - 0.01500002
+    - -0.02000001
   Connections:
     Connections: []
   Rack: {fileID: 11400000}
-  Position: {x: 0, y: 0}
-  output: 0
+  Position: {x: 2, y: 0}
+  output: -1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,6 +298,9 @@ MonoBehaviour:
   Modules:
   - {fileID: -7401753522596618763}
   - {fileID: -1227958922589174261}
+  - {fileID: -7375145089755582047}
+  - {fileID: -3889891193941872352}
+  - {fileID: -5923397722798531050}
   active: 1
   ScrollPosition: {x: 0, y: 0}
   Zoom: 1
