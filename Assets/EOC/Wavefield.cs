@@ -7,8 +7,11 @@ namespace Eidetic.URack.Base
 {
     public class Wavefield : Module
     {
-        public GameObject Target;
-        public GameObject CameraGroup;
+        GameObject target;
+        public GameObject Target => target ?? (target = GameObject.Find("Group 1"));
+
+        GameObject cameraGroup;
+        public GameObject CameraGroup => cameraGroup ?? (cameraGroup = GameObject.Find("Cameras"));
 
         public VisualEffect Projection;
 
@@ -35,7 +38,8 @@ namespace Eidetic.URack.Base
         [Input(0, 1, 1, .75f), Knob]
         public float Value
         {
-            set {
+            set
+            {
                 var trailsModule = Target.GetComponentInChildren<ParticleSystem>().trails;
                 trailsModule.colorOverLifetime = Color.white * value;
             }
@@ -88,7 +92,7 @@ namespace Eidetic.URack.Base
 
         Vector3 LookAtPosition = new Vector3(0, 0, 0);
 
-        [Input(1, 30, 3, 3), Knob] public float Lag = 3;
+        [Input(1, 50, 4, 3), Knob] public float Lag = 3;
 
 
 
@@ -97,31 +101,39 @@ namespace Eidetic.URack.Base
 
         GameObject Anchor;
 
+
+        bool initialised;
         public void Start()
         {
-            CameraGroup = GameObject.Find("Cameras");
-            Target = GameObject.Find("Group 1");
-            ParticleSystem = GameObject.Find("Wavefield-System").GetComponent<ParticleSystem>();
-            Transform = GameObject.Find("Wavefield-System").transform;
-            Projection = GameObject.Find("Group 1 Projection").GetComponent<VisualEffect>();
-            Anchor = GameObject.Find("Anchor");
         }
 
         public void Update()
         {
+            if (Time.frameCount > 0 && !initialised)
+            {
+                ParticleSystem = GameObject.Find("Wavefield-System").GetComponent<ParticleSystem>();
+                Transform = GameObject.Find("Wavefield-System").transform;
+                Projection = GameObject.Find("Group 1 Projection").GetComponent<VisualEffect>();
+                Anchor = GameObject.Find("Anchor");
+                initialised = true;
+            }
+
             CameraPosition.x = Utility.Damp(CameraPosition.x, CameraX, Lag);
             CameraPosition.y = Utility.Damp(CameraPosition.y, CameraY, Lag);
             CameraPosition.z = Utility.Damp(CameraPosition.z, CameraZ, Lag);
 
-            CameraGroup.transform.position = CameraPosition;
-            
+            if (CameraGroup != null)
+                CameraGroup.transform.position = CameraPosition;
+
             LookAtPosition.x = Utility.Damp(LookAtPosition.x, LookAtX, Lag);
             LookAtPosition.y = Utility.Damp(LookAtPosition.y, LookAtY, Lag);
             LookAtPosition.z = Utility.Damp(LookAtPosition.z, LookAtZ, Lag);
 
-            Anchor.transform.position = Target.transform.position + LookAtPosition;
+            if (Anchor != null && Target != null)
+                Anchor.transform.position = Target.transform.position + LookAtPosition;
 
-            CameraGroup.transform.LookAt(Anchor.transform);
+            if (CameraGroup != null && Anchor != null)
+                CameraGroup.transform.LookAt(Anchor.transform);
 
             var scrollDistance = ScrollRate * Time.deltaTime;
 

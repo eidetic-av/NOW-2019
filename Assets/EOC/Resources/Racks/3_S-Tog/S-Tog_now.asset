@@ -1,0 +1,779 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8749964619483436865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501265a561c824c448d370c217007bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Override
+    - Val1A
+    - Val2A
+    - Val1B
+    - Val1C
+    - Val1D
+    - Val2B
+    - Val2C
+    - Val2D
+    - Val3A
+    - Val3B
+    - Val3C
+    - Val3D
+    - Val4A
+    - Val4B
+    - Val4C
+    - Val4D
+    - Val5A
+    - Val5B
+    - Val5C
+    - Val5D
+    - Val6A
+    - Val6B
+    - Val6C
+    - Val6D
+    - Val7A
+    - Val7B
+    - Val7C
+    - Val7D
+    - Val8A
+    - Val8B
+    - Val8C
+    - Val8D
+    - Val9A
+    - Val9B
+    - Val9C
+    - Val9D
+    - MinD
+    - MaxD
+    - MinA
+    - MaxA
+    - MaxC
+    - ScaleA
+    - ScaleB
+    - ScaleC
+    - ScaleD
+    values:
+    - -1
+    - -0.115
+    - 0.07499999
+    - -0.145
+    - -1
+    - 1
+    - 0.07000012
+    - -1
+    - 1
+    - 0.115
+    - -0.515
+    - -1
+    - 1
+    - -1
+    - -0.22
+    - -1
+    - 1
+    - -1
+    - 0.07999998
+    - -1
+    - 1
+    - -1
+    - -1
+    - -1
+    - 1
+    - -1
+    - 0.58
+    - -1
+    - 1
+    - -1
+    - -0.795
+    - -1
+    - 1
+    - -1
+    - -0.59
+    - -1
+    - 1
+    - -1
+    - 1
+    - -1
+    - 1
+    - 0
+    - -0.75
+    - -0.9
+    - -1
+    - -1
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: MinZ
+        Module: {fileID: -6198025194039655298}
+  Rack: {fileID: 11400000}
+  Position: {x: 0, y: 0}
+  Val1A: -0.115
+  Val1B: -0.145
+  Val1C: -1
+  Val1D: 1
+  Val2A: 0.07499999
+  Val2B: 0.07000012
+  Val2C: -1
+  Val2D: 1
+  Val3A: 0.115
+  Val3B: -0.515
+  Val3C: -1
+  Val3D: 1
+  Val4A: -1
+  Val4B: -0.22
+  Val4C: -1
+  Val4D: 1
+  Val5A: -1
+  Val5B: 0.07999998
+  Val5C: -1
+  Val5D: 1
+  Val6A: -1
+  Val6B: -1
+  Val6C: -1
+  Val6D: 1
+  Val7A: -1
+  Val7B: 0.58
+  Val7C: -1
+  Val7D: 1
+  Val8A: -1
+  Val8B: -0.795
+  Val8C: -1
+  Val8D: 1
+  Val9A: -1
+  Val9B: -0.59
+  Val9C: -1
+  Val9D: 1
+  ScaleA: 0.93125
+  ScaleB: 1.5325
+  ScaleC: 0.35
+  ScaleD: 0.35
+  Override: 0
+  OutputA: 0.06984374
+  OutputB: 0.10727519
+  OutputC: -0.35
+  OutputD: 0.35
+--- !u!114 &-8036931284879618372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3efe4d7bc472004d8546c62a93cb0e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Right
+    - Left
+    - Direction
+    values:
+    - 1
+    - 1
+    - -0.9400001
+  Connections:
+    Connections:
+    - Key: Output
+      Value:
+        MemberName: Override
+        Module: {fileID: 1491214020554186997}
+  Rack: {fileID: 11400000}
+  Position: {x: 4, y: 1}
+  Direction: -0.9400001
+  Left: -1
+  Right: 2.2638855
+--- !u!114 &-7487605032931056439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Name
+    values:
+    - AZ
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: LookAtZ
+        Module: {fileID: -1673867815073561232}
+  Rack: {fileID: 11400000}
+  Position: {x: 10, y: 1}
+  Name: AZ
+--- !u!114 &-6198025194039655298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52fded8cf93a63443accda938fdd0cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - TranslationZ
+    - RotationX
+    - RotationY
+    - RotationZ
+    - ScaleX
+    - ScaleY
+    - ScaleZ
+    - TranslationY
+    - TranslationX
+    - MinY
+    - MaxX
+    - MinX
+    - MaxZ
+    - MinZ
+    - MaxY
+    - DisableUpdate
+    - UpdateFrequency
+    values:
+    - -0.17
+    - -0.02000001
+    - 0.135
+    - -0.07999998
+    - -0.675
+    - 0.71
+    - 0.64
+    - -0.1700001
+    - 0.595
+    - -1
+    - 0.8500001
+    - -1
+    - 1
+    - 1
+    - 1
+    - -1
+    - -1
+  Connections:
+    Connections:
+    - Key: PointCloud
+      Value:
+        MemberName: PointCloud
+        Module: {fileID: -4087903690581845182}
+  Rack: {fileID: 11400000}
+  Position: {x: 0, y: 1}
+  UpdateFrequency: 0
+  MinX: -5
+  MaxX: 4.2500005
+  MinY: -5
+  MaxY: 5
+  MinZ: 0.3492187
+  MaxZ: 5
+  RotationX: -3.6000018
+  RotationY: 24.300001
+  RotationZ: -14.399997
+  TranslationX: 2.9750001
+  TranslationY: -0.8500005
+  TranslationZ: 0.85
+  ScaleX: -6.75
+  ScaleY: 7.1
+  ScaleZ: 6.3999996
+  NewFrame: 0
+  Address: 127.0.0.1
+  Port: 48002
+--- !u!114 &-4087903690581845182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f446699843142f04e8a97380f645afa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Output
+    - Size
+    - Lifetime
+    - Turbulence
+    - SpawnRate
+    - ColorOffsetRed
+    - Glow
+    - ColorOffsetGreen
+    - ColorOffsetBlue
+    values:
+    - -1
+    - 0.345
+    - -0.45
+    - -1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+  Connections:
+    Connections: []
+  Rack: {fileID: 11400000}
+  Position: {x: 1, y: 1}
+  output: -1
+--- !u!114 &-2280209808512351222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Name
+    - InputA
+    values:
+    - AY
+    - 0.06000002
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: LookAtY
+        Module: {fileID: -1673867815073561232}
+  Rack: {fileID: 11400000}
+  Position: {x: 9, y: 1}
+  Name: AY
+--- !u!114 &-1673867815073561232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc29f172a19eba47beaa281a8a5c75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - CameraX
+    - CameraY
+    - CameraZ
+    - Lag
+    - LookAtZ
+    - LookAtY
+    - LookAtX
+    values:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+  Connections:
+    Connections: []
+  Rack: {fileID: 11400000}
+  Position: {x: 2, y: 0}
+  Projection: {fileID: 0}
+  ScrollRate: 0
+  CameraX: 18.5
+  CameraY: 18.749996
+  CameraZ: 22.249994
+  LookAtX: 3.400001
+  LookAtY: 0.6000002
+  LookAtZ: 0
+  Lag: 30
+--- !u!114 &-1615397920723208655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Name
+    - InputA
+    values:
+    - CX
+    - 0.74
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: CameraX
+        Module: {fileID: -1673867815073561232}
+  Rack: {fileID: 11400000}
+  Position: {x: 5, y: 1}
+  Name: CX
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9fd785df7010f408358b2c800aa9ef, type: 3}
+  m_Name: S-Tog_now
+  m_EditorClassIdentifier: 
+  Modules:
+  - {fileID: -6198025194039655298}
+  - {fileID: -8749964619483436865}
+  - {fileID: -4087903690581845182}
+  - {fileID: 1491214020554186997}
+  - {fileID: 2990746679027051223}
+  - {fileID: 8022472743241182057}
+  - {fileID: -8036931284879618372}
+  - {fileID: -1673867815073561232}
+  - {fileID: -1615397920723208655}
+  - {fileID: 7408900244362005542}
+  - {fileID: 970249813200641346}
+  - {fileID: 3382034088577768930}
+  - {fileID: -2280209808512351222}
+  - {fileID: -7487605032931056439}
+  - {fileID: 5104927640154383750}
+  active: 1
+  ScrollPosition: {x: 0, y: 0}
+  Zoom: 1
+--- !u!114 &970249813200641346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Name
+    - InputA
+    values:
+    - CZ
+    - 0.8899998
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: CameraZ
+        Module: {fileID: -1673867815073561232}
+  Rack: {fileID: 11400000}
+  Position: {x: 7, y: 1}
+  Name: CZ
+--- !u!114 &1491214020554186997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501265a561c824c448d370c217007bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Val1A
+    - Val1B
+    - Val2A
+    - Override
+    - ScaleA
+    - ScaleB
+    - ScaleC
+    - ScaleD
+    values:
+    - -1
+    - -0.12
+    - 1
+    - 1
+    - -1
+    - -1
+    - -1
+    - -1
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: ColorOffsetRed
+        Module: {fileID: -4087903690581845182}
+    - Key: OutputB
+      Value:
+        MemberName: ColorOffsetGreen
+        Module: {fileID: -4087903690581845182}
+    - Key: OutputC
+      Value:
+        MemberName: ColorOffsetBlue
+        Module: {fileID: -4087903690581845182}
+  Rack: {fileID: 11400000}
+  Position: {x: 1, y: 0}
+  Val1A: -1
+  Val1B: -0.12
+  Val1C: 0
+  Val1D: 0
+  Val2A: 1
+  Val2B: 0
+  Val2C: 0
+  Val2D: 0
+  Val3A: 0
+  Val3B: 0
+  Val3C: 0
+  Val3D: 0
+  Val4A: 0
+  Val4B: 0
+  Val4C: 0
+  Val4D: 0
+  Val5A: 0
+  Val5B: 0
+  Val5C: 0
+  Val5D: 0
+  Val6A: 0
+  Val6B: 0
+  Val6C: 0
+  Val6D: 0
+  Val7A: 0
+  Val7B: 0
+  Val7C: 0
+  Val7D: 0
+  Val8A: 0
+  Val8B: 0
+  Val8C: 0
+  Val8D: 0
+  Val9A: 0
+  Val9B: 0
+  Val9C: 0
+  Val9D: 0
+  ScaleA: 0.35
+  ScaleB: 1.35
+  ScaleC: 0.35
+  ScaleD: 0.35
+  Override: 0
+  OutputA: 0.35
+  OutputB: 0
+  OutputC: 0
+  OutputD: 0
+--- !u!114 &2990746679027051223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - InputA
+    - Name
+    values:
+    - -1
+    - Direct
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: Left
+        Module: {fileID: -8036931284879618372}
+  Rack: {fileID: 11400000}
+  Position: {x: 3, y: 1}
+  Name: Direct
+--- !u!114 &3382034088577768930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Name
+    - InputA
+    values:
+    - AX
+    - 0.3400001
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: LookAtX
+        Module: {fileID: -1673867815073561232}
+  Rack: {fileID: 11400000}
+  Position: {x: 8, y: 1}
+  Name: AX
+--- !u!114 &5104927640154383750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501265a561c824c448d370c217007bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys: []
+    values: []
+  Connections:
+    Connections: []
+  Rack: {fileID: 11400000}
+  Position: {x: 0, y: 0}
+  Val1A: 0
+  Val1B: 0
+  Val1C: 0
+  Val1D: 0
+  Val2A: 0
+  Val2B: 0
+  Val2C: 0
+  Val2D: 0
+  Val3A: 0
+  Val3B: 0
+  Val3C: 0
+  Val3D: 0
+  Val4A: 0
+  Val4B: 0
+  Val4C: 0
+  Val4D: 0
+  Val5A: 0
+  Val5B: 0
+  Val5C: 0
+  Val5D: 0
+  Val6A: 0
+  Val6B: 0
+  Val6C: 0
+  Val6D: 0
+  Val7A: 0
+  Val7B: 0
+  Val7C: 0
+  Val7D: 0
+  Val8A: 0
+  Val8B: 0
+  Val8C: 0
+  Val8D: 0
+  Val9A: 0
+  Val9B: 0
+  Val9C: 0
+  Val9D: 0
+  ScaleA: 0
+  ScaleB: 0
+  ScaleC: 0
+  ScaleD: 0
+  Override: 0
+  OutputA: 0
+  OutputB: 0
+  OutputC: 0
+  OutputD: 0
+--- !u!114 &7408900244362005542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Name
+    - InputA
+    values:
+    - CY
+    - 0.7499999
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: CameraY
+        Module: {fileID: -1673867815073561232}
+  Rack: {fileID: 11400000}
+  Position: {x: 6, y: 1}
+  Name: CY
+--- !u!114 &8022472743241182057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963f5396ac4ecde4fac82d67c7f48dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - TrackA-SpeedIndex
+    - TrackB-SpeedIndex
+    - TrackC-SpeedIndex
+    - TrackD-SpeedIndex
+    values:
+    - 0.6899999
+    - 1
+    - 1
+    - 0.38
+  Connections:
+    Connections:
+    - Key: TrackD-Saw
+      Value:
+        MemberName: Right
+        Module: {fileID: -8036931284879618372}
+  Rack: {fileID: 11400000}
+  Position: {x: 2, y: 1}
+  Clock: 120
+  TrackA:
+    MemberName: TrackA
+    Module: {fileID: 8022472743241182057}
+    speedIndex: 13
+  TrackB:
+    MemberName: TrackB
+    Module: {fileID: 8022472743241182057}
+    speedIndex: 16
+  TrackC:
+    MemberName: TrackC
+    Module: {fileID: 8022472743241182057}
+    speedIndex: 16
+  TrackD:
+    MemberName: TrackD
+    Module: {fileID: 8022472743241182057}
+    speedIndex: 11
