@@ -17,20 +17,26 @@ MonoBehaviour:
     - Scale
     - OffsetScale
     - Drag
+    - Offset
     values:
-    - 0.825
-    - -0.005
+    - 1
+    - -0.355
     - -0.73
+    - 0.04499999
   Connections:
-    Connections: []
+    Connections:
+    - Key: Output
+      Value:
+        MemberName: Turbulence
+        Module: {fileID: -7207905946127539817}
   Rack: {fileID: 11400000}
-  Position: {x: 4, y: 0}
+  Position: {x: 3, y: 0}
   Input: 0
-  Scale: 2.475
-  OffsetScale: -0.015
-  Offset: 0
+  Scale: 3
+  OffsetScale: -1.0649999
+  Offset: 0.5225
   Drag: 0.027337497
-  Output: 0
+  Output: -0.55646247
 --- !u!114 &-7375145089755582047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +86,7 @@ MonoBehaviour:
     - 1
     - -0.225
     - -0.01499997
-    - 0.705
+    - 1
     - -0.205
     - 0.08500005
     - -0.07499999
@@ -93,16 +99,18 @@ MonoBehaviour:
   Connections:
     Connections: []
   Rack: {fileID: 11400000}
-  Position: {x: 2, y: 0}
+  Position: {x: 1, y: 0}
+  Target: {fileID: 0}
+  CameraGroup: {fileID: 0}
   Projection: {fileID: 0}
   ScrollRate: 0
-  CameraX: 4.7111883
-  CameraY: -2.0266702
-  CameraZ: 10.249998
-  LookAtX: 0.39412507
+  CameraX: -2.3393736
+  CameraY: 17.349998
+  CameraZ: 17.624998
+  LookAtX: -3.8155553
   LookAtY: 0.8500005
   LookAtZ: -2.05
-  Lag: 11.063995
+  Lag: 12.674402
 --- !u!114 &-7207905946127539817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,53 +139,24 @@ MonoBehaviour:
     - TurbulenceScaleY
     - TurbulenceScaleZ
     values:
-    - 0.12
+    - -0.405
     - -0.755
-    - -0.34
-    - 0.6
-    - -0.38
-    - 0.01500003
+    - -0.03500001
+    - -0.3050001
+    - -1
+    - -0.49
     - -0.18
     - -0.42
     - 0.065
+    - -0.91
     - -1
-    - -0.6799999
-    - 0.09499997
-    - 0.91
-  Connections:
-    Connections: []
-  Rack: {fileID: 11400000}
-  Position: {x: 1, y: 0}
-  output: -0.755
---- !u!114 &-5923397722798531050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 771afe3e63b578c4e87570cf428a62ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Values:
-    keys:
-    - Device
-    - Channel
-    values:
-    - node
-    - 1
+    - -0.6800001
+    - -0.625
   Connections:
     Connections: []
   Rack: {fileID: 11400000}
   Position: {x: 0, y: 0}
-  A: 0.8425197
-  B: 0.9212598
-  C: -1
-  D: 1
-  E: 0.19685039
-  F: -0.41732284
+  output: -0.755
 --- !u!114 &-5531577469022223627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,20 +180,22 @@ MonoBehaviour:
     - ColorOffsetBlue
     - Size
     - Noise
+    - Turbulence
     values:
     - -0.8150001
-    - 0.8
+    - 1
     - -0.4
-    - 0.5
-    - -0.635
+    - 1
+    - -0.375
     - -0.625
     - -0.685
-    - 0.355
+    - 0.3500001
+    - -1
     - -1
   Connections:
     Connections: []
   Rack: {fileID: 11400000}
-  Position: {x: 3, y: 0}
+  Position: {x: 2, y: 0}
   output: -0.8150001
 --- !u!114 &-4325605755121883443
 MonoBehaviour:
@@ -284,6 +265,86 @@ MonoBehaviour:
   NewFrame: 0
   Address: 127.01.0.1
   Port: 48002
+--- !u!114 &-2872728741961172238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8107f2451d5ec24c9eaf681921a1b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - InputA
+    values:
+    - -1
+  Connections:
+    Connections:
+    - Key: Output
+      Value:
+        MemberName: CameraX
+        Module: {fileID: -7375145089755582047}
+  Rack: {fileID: 11400000}
+  Position: {x: 7, y: 1}
+  InputA: 0
+  InputB: -0.18999988
+  InputC: 0
+  InputD: 0
+--- !u!114 &-2495193708114156624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys: []
+    values: []
+  Connections:
+    Connections: []
+  Rack: {fileID: 11400000}
+  Position: {x: 0, y: 0}
+  Name: 
+--- !u!114 &-357429362341213487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8107f2451d5ec24c9eaf681921a1b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - InputA
+    - InputB
+    values:
+    - -0.6499999
+    - 1
+  Connections:
+    Connections:
+    - Key: Output
+      Value:
+        MemberName: CameraY
+        Module: {fileID: -7375145089755582047}
+  Rack: {fileID: 11400000}
+  Position: {x: 5, y: 1}
+  InputA: 0.024000365
+  InputB: 0.6699996
+  InputC: 0
+  InputD: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +359,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Modules:
   - {fileID: -7375145089755582047}
-  - {fileID: -5923397722798531050}
   - {fileID: -7207905946127539817}
   - {fileID: -4325605755121883443}
   - {fileID: 4874376543164965233}
@@ -306,9 +366,71 @@ MonoBehaviour:
   - {fileID: -5531577469022223627}
   - {fileID: 4456261885353212345}
   - {fileID: 8277488887792842307}
-  active: 0
+  - {fileID: 6473797612415491599}
+  - {fileID: 1994753259750254365}
+  - {fileID: 2809603167073730423}
+  - {fileID: -357429362341213487}
+  - {fileID: 9155396285285750985}
+  - {fileID: -2872728741961172238}
+  - {fileID: 7013150723843097326}
+  - {fileID: -2495193708114156624}
+  active: 1
   ScrollPosition: {x: 0, y: 0}
   Zoom: 1
+--- !u!114 &1994753259750254365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - InputA
+    values:
+    - 1
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: InputB
+        Module: {fileID: 9155396285285750985}
+  Rack: {fileID: 11400000}
+  Position: {x: 3, y: 1}
+  Name: 
+--- !u!114 &2809603167073730423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - InputA
+    - Name
+    values:
+    - -0.1899999
+    - XCam
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: InputB
+        Module: {fileID: -2872728741961172238}
+  Rack: {fileID: 11400000}
+  Position: {x: 4, y: 1}
+  Name: XCam
 --- !u!114 &4456261885353212345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,10 +451,10 @@ MonoBehaviour:
     - TrackC-SpeedIndex
     - TrackD-SpeedIndex
     values:
-    - 0.37
-    - -0.875
     - 1
-    - 0.7799999
+    - -1
+    - 1
+    - 1
     - 1
   Connections:
     Connections:
@@ -346,19 +468,23 @@ MonoBehaviour:
         Module: {fileID: -7375145089755582047}
     - Key: TrackB-Sin
       Value:
-        MemberName: CameraY
-        Module: {fileID: -7375145089755582047}
-    - Key: TrackA-Sin
+        MemberName: InputA
+        Module: {fileID: -357429362341213487}
+    - Key: TrackA-Tri
       Value:
-        MemberName: CameraX
-        Module: {fileID: -7375145089755582047}
+        MemberName: InputA
+        Module: {fileID: 9155396285285750985}
+    - Key: TrackD-Sin
+      Value:
+        MemberName: InputA
+        Module: {fileID: -2872728741961172238}
   Rack: {fileID: 11400000}
   Position: {x: 1, y: 1}
-  Clock: 49.0625
+  Clock: 35
   TrackA:
     MemberName: TrackA
     Module: {fileID: 4456261885353212345}
-    speedIndex: 10
+    speedIndex: 16
   TrackB:
     MemberName: TrackB
     Module: {fileID: 4456261885353212345}
@@ -366,7 +492,7 @@ MonoBehaviour:
   TrackC:
     MemberName: TrackC
     Module: {fileID: 4456261885353212345}
-    speedIndex: 14
+    speedIndex: 16
   TrackD:
     MemberName: TrackD
     Module: {fileID: 4456261885353212345}
@@ -387,20 +513,77 @@ MonoBehaviour:
     keys:
     - NameA
     - NameB
+    - NameC
     values:
     - EnergyMax
     - Energy1
+    - PositiveEnergyMaxc
   Connections:
     Connections:
     - Key: OutputA
       Value:
         MemberName: Input
         Module: {fileID: -7435338514418662590}
+    - Key: OutputC
+      Value:
+        MemberName: InputC
+        Module: {fileID: -2872728741961172238}
   Rack: {fileID: 11400000}
-  Position: {x: 6, y: 0}
+  Position: {x: 5, y: 0}
   NameA: EnergyMax
   NameB: Energy1
-  NameC: 
+  NameC: PositiveEnergyMaxc
+--- !u!114 &6473797612415491599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Name
+    - InputA
+    values:
+    - YCam
+    - 0.6699996
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: InputB
+        Module: {fileID: -357429362341213487}
+  Rack: {fileID: 11400000}
+  Position: {x: 2, y: 1}
+  Name: YCam
+--- !u!114 &7013150723843097326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8107f2451d5ec24c9eaf681921a1b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys: []
+    values: []
+  Connections:
+    Connections: []
+  Rack: {fileID: 11400000}
+  Position: {x: 6, y: 0}
+  InputA: 0
+  InputB: 0
+  InputC: 0
+  InputD: 0
 --- !u!114 &8277488887792842307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,7 +602,38 @@ MonoBehaviour:
   Connections:
     Connections: []
   Rack: {fileID: 11400000}
-  Position: {x: 5, y: 0}
+  Position: {x: 4, y: 0}
   InputA: 0
   InputB: 0
   InputC: 0
+--- !u!114 &9155396285285750985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8107f2451d5ec24c9eaf681921a1b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - InputA
+    - InputB
+    values:
+    - -1
+    - 1
+  Connections:
+    Connections:
+    - Key: Output
+      Value:
+        MemberName: CameraZ
+        Module: {fileID: -7375145089755582047}
+  Rack: {fileID: 11400000}
+  Position: {x: 6, y: 1}
+  InputA: 0
+  InputB: 1
+  InputC: 0
+  InputD: 0

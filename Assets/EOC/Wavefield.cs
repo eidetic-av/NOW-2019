@@ -7,11 +7,9 @@ namespace Eidetic.URack.Base
 {
     public class Wavefield : Module
     {
-        GameObject target;
-        public GameObject Target => target ?? (target = GameObject.Find("Group 1"));
+        public GameObject Target;
 
-        GameObject cameraGroup;
-        public GameObject CameraGroup => cameraGroup ?? (cameraGroup = GameObject.Find("Cameras"));
+        public GameObject CameraGroup;
 
         public VisualEffect Projection;
 
@@ -103,18 +101,21 @@ namespace Eidetic.URack.Base
 
 
         bool initialised;
-        public void Start()
+        public void ElementAttach()
         {
+ParticleSystem = GameObject.Find("Wavefield-System").GetComponent<ParticleSystem>();
+                Transform = GameObject.Find("Wavefield-System").transform;
+                Projection = GameObject.Find("Group 1 Projection").GetComponent<VisualEffect>();
+                Anchor = GameObject.Find("Anchor");
+                CameraGroup = GameObject.Find("Cameras");
+                Target = GameObject.Find("Group 1");
         }
 
         public void Update()
         {
             if (Time.frameCount > 0 && !initialised)
             {
-                ParticleSystem = GameObject.Find("Wavefield-System").GetComponent<ParticleSystem>();
-                Transform = GameObject.Find("Wavefield-System").transform;
-                Projection = GameObject.Find("Group 1 Projection").GetComponent<VisualEffect>();
-                Anchor = GameObject.Find("Anchor");
+                
                 initialised = true;
             }
 

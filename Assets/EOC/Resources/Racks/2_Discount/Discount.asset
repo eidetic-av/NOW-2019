@@ -23,9 +23,61 @@ MonoBehaviour:
         Module: {fileID: -1104508840086078555}
   Rack: {fileID: 11400000}
   Position: {x: 2, y: 1}
-  InputA: 0.7439041
+  InputA: -0.065702796
   InputB: 0
   InputC: 0
+--- !u!114 &-7493409777720662796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - InputA
+    - Name
+    values:
+    - 1
+    - Image
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: ImageA
+        Module: {fileID: -1104508840086078555}
+    - Key: OutputA
+      Value:
+        MemberName: InputB
+        Module: {fileID: 45381579453026470}
+  Rack: {fileID: 11400000}
+  Position: {x: 10, y: 0}
+  Name: Image
+--- !u!114 &-6456299264162475075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys: []
+    values: []
+  Connections:
+    Connections: []
+  Rack: {fileID: 11400000}
+  Position: {x: 1, y: 0}
+  Name: 
 --- !u!114 &-6024961737359441673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,19 +94,15 @@ MonoBehaviour:
     keys:
     - Drag
     values:
-    - -0.645
+    - -0.5549999
   Connections:
-    Connections:
-    - Key: Output
-      Value:
-        MemberName: Input
-        Module: {fileID: -133031510966334469}
+    Connections: []
   Rack: {fileID: 11400000}
-  Position: {x: 4, y: 0}
-  Input: 0
-  Drag: 0.04725938
-  Output: 0
---- !u!114 &-4913940378397413306
+  Position: {x: 5, y: 0}
+  Input: 1
+  Drag: 0.07425941
+  Output: 1
+--- !u!114 &-5336907954491592585
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,26 +111,68 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5597e7a1d123af43b8dd63e139e392a, type: 3}
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Values:
     keys:
-    - Drag
+    - InputA
+    - Name
     values:
-    - -0.32
+    - 1
+    - Blend
   Connections:
     Connections:
-    - Key: Output
+    - Key: OutputA
       Value:
-        MemberName: ImageScale
-        Module: {fileID: 7476036934002900341}
+        MemberName: Blend
+        Module: {fileID: -1104508840086078555}
   Rack: {fileID: 11400000}
-  Position: {x: 1, y: 0}
-  Input: 1
-  Drag: 0.17339998
-  Output: 0.99999994
---- !u!114 &-2382494296366507719
+  Position: {x: 11, y: 0}
+  Name: Blend
+--- !u!114 &-4353535503068471481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc29f172a19eba47beaa281a8a5c75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - Lux
+    - CameraX
+    - CameraY
+    - LookAtY
+    - CameraZ
+    - SceneFOV
+    - LookAtZ
+    values:
+    - -0.2749999
+    - -0.35
+    - 0.06000001
+    - -0.105
+    - -0.82
+    - -1
+    - 0.065
+  Connections:
+    Connections: []
+  Rack: {fileID: 11400000}
+  Position: {x: 6, y: 0}
+  Projection: {fileID: 0}
+  ScrollRate: 0
+  CameraX: -8.75
+  CameraY: 1.5000002
+  CameraZ: -20.5
+  LookAtX: 0
+  LookAtY: -1.05
+  LookAtZ: 0.65
+  Lag: 3
+--- !u!114 &-1503452707104155406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,38 +190,9 @@ MonoBehaviour:
     - OffsetScale
     - Offset
     values:
-    - 1
-    - -0.004999995
-    - 0.02
-  Connections:
-    Connections:
-    - Key: Output
-      Value:
-        MemberName: InputB
-        Module: {fileID: 941397718080380260}
-  Rack: {fileID: 11400000}
-  Position: {x: 4, y: 1}
-  Input: 0
-  Scale: 0
-  OffsetScale: -0.014999986
-  Offset: 0.51
---- !u!114 &-1503452707104155406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd854d1793da3a42a33b696824fc11b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Values:
-    keys:
-    - Scale
-    values:
-    - 1
+    - -0.17
+    - 0.695
+    - -0.57
   Connections:
     Connections:
     - Key: Output
@@ -139,11 +200,11 @@ MonoBehaviour:
         MemberName: InputB
         Module: {fileID: 4344757424898022679}
   Rack: {fileID: 11400000}
-  Position: {x: 7, y: 1}
-  Input: 0
-  Scale: 0
-  OffsetScale: 1
-  Offset: 0
+  Position: {x: 5, y: 1}
+  Input: 1
+  Scale: -1.245
+  OffsetScale: 2.085
+  Offset: 0.215
 --- !u!114 &-1104508840086078555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,59 +232,30 @@ MonoBehaviour:
     - WarpDirectionX
     - Glow
     - Folder
+    - NoiseScaleX
+    - NoiseScaleY
     values:
-    - 0.52
+    - -1
     - 1
-    - 1
+    - 0.355
     - 0.875
+    - 0.705
     - 1
     - 1
     - 1
-    - 1
-    - 1
-    - 1
+    - -0.29
+    - 0.07999998
     - -0.715
-    - -0.675
+    - -0.215
     - Discount
+    - 0.43
+    - 0.7250001
   Connections:
     Connections: []
   Rack: {fileID: 11400000}
   Position: {x: 0, y: 1}
-  output: 0.52
+  output: -1
   Folder: Discount
---- !u!114 &-133031510966334469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd854d1793da3a42a33b696824fc11b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Values:
-    keys:
-    - OffsetScale
-    - Offset
-    - Scale
-    values:
-    - 0.04999998
-    - 0.005000018
-    - 1
-  Connections:
-    Connections:
-    - Key: Output
-      Value:
-        MemberName: InputB
-        Module: {fileID: 102499269091515241}
-  Rack: {fileID: 11400000}
-  Position: {x: 8, y: 0}
-  Input: 0
-  Scale: 0
-  OffsetScale: 0.14999993
-  Offset: 0.5025
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,15 +269,10 @@ MonoBehaviour:
   m_Name: Discount
   m_EditorClassIdentifier: 
   Modules:
-  - {fileID: 7476036934002900341}
   - {fileID: -1104508840086078555}
   - {fileID: 2655380334720119376}
   - {fileID: 7493126980358868449}
   - {fileID: -6024961737359441673}
-  - {fileID: -133031510966334469}
-  - {fileID: -2382494296366507719}
-  - {fileID: 7799388611649374985}
-  - {fileID: 102499269091515241}
   - {fileID: 941397718080380260}
   - {fileID: 319741485387753869}
   - {fileID: 6593341786384035197}
@@ -255,14 +282,18 @@ MonoBehaviour:
   - {fileID: 4907319480563074489}
   - {fileID: 2990465898901774050}
   - {fileID: -9166795714652657825}
-  - {fileID: 712890801221916528}
-  - {fileID: -4913940378397413306}
   - {fileID: 7519185554908220344}
   - {fileID: 45381579453026470}
   - {fileID: 4107414738853111297}
-  - {fileID: 3243208931277705727}
+  - {fileID: -4353535503068471481}
+  - {fileID: 2809200698801619530}
+  - {fileID: 8860530022284610949}
+  - {fileID: 5166963158486424207}
+  - {fileID: -7493409777720662796}
+  - {fileID: -5336907954491592585}
+  - {fileID: -6456299264162475075}
   active: 0
-  ScrollPosition: {x: 0, y: -120}
+  ScrollPosition: {x: 0, y: 0}
   Zoom: 1
 --- !u!114 &45381579453026470
 MonoBehaviour:
@@ -281,52 +312,15 @@ MonoBehaviour:
     values: []
   Connections:
     Connections:
-    - Key: OutputA
-      Value:
-        MemberName: ImageB
-        Module: {fileID: 7476036934002900341}
     - Key: OutputB
       Value:
         MemberName: ImageB
         Module: {fileID: -1104508840086078555}
   Rack: {fileID: 11400000}
-  Position: {x: 2, y: 0}
-  InputA: 0.28346458
-  InputB: 0.27559054
+  Position: {x: 0, y: 0}
+  InputA: -0.41000003
+  InputB: 1
   InputC: 0
---- !u!114 &102499269091515241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96f005af92540bb40ab04ee6f9811230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Values:
-    keys:
-    - InputA
-    - InputB
-    - InputC
-    values:
-    - 1
-    - 1
-    - 0.27
-  Connections:
-    Connections:
-    - Key: Output
-      Value:
-        MemberName: NoiseIntensity
-        Module: {fileID: 7476036934002900341}
-  Rack: {fileID: 11400000}
-  Position: {x: 6, y: 0}
-  InputA: 0
-  InputB: 0.07537497
-  InputC: 0.27
-  InputD: 0
 --- !u!114 &138706814640463318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +337,7 @@ MonoBehaviour:
     keys:
     - Drag
     values:
-    - -0.75
+    - -0.805
   Connections:
     Connections:
     - Key: Output
@@ -351,10 +345,10 @@ MonoBehaviour:
         MemberName: Input
         Module: {fileID: 6593341786384035197}
   Rack: {fileID: 11400000}
-  Position: {x: 11, y: 0}
-  Input: 0
-  Drag: 0.0234375
-  Output: 0
+  Position: {x: 4, y: 0}
+  Input: 1
+  Drag: 0.014259375
+  Output: 1
 --- !u!114 &319741485387753869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,102 +369,13 @@ MonoBehaviour:
     - 1
     - 1
   Connections:
-    Connections:
-    - Key: Output
-      Value:
-        MemberName: Warp
-        Module: {fileID: 7476036934002900341}
+    Connections: []
   Rack: {fileID: 11400000}
-  Position: {x: 9, y: 0}
-  InputA: 0
-  InputB: 0
+  Position: {x: 2, y: 0}
+  InputA: 1
+  InputB: -2.28
   InputC: 0
   InputD: 0
---- !u!114 &712890801221916528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 771afe3e63b578c4e87570cf428a62ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Values:
-    keys:
-    - Device
-    - Channel
-    values:
-    - node
-    - 2
-  Connections:
-    Connections:
-    - Key: B
-      Value:
-        MemberName: Speed
-        Module: {fileID: 7476036934002900341}
-    - Key: B
-      Value:
-        MemberName: Speed
-        Module: {fileID: -1104508840086078555}
-    - Key: C
-      Value:
-        MemberName: NoiseScaleX
-        Module: {fileID: 7476036934002900341}
-    - Key: D
-      Value:
-        MemberName: NoiseScaleY
-        Module: {fileID: 7476036934002900341}
-    - Key: C
-      Value:
-        MemberName: NoiseScaleX
-        Module: {fileID: -1104508840086078555}
-    - Key: D
-      Value:
-        MemberName: NoiseScaleY
-        Module: {fileID: -1104508840086078555}
-    - Key: E
-      Value:
-        MemberName: Shards
-        Module: {fileID: 7476036934002900341}
-    - Key: E
-      Value:
-        MemberName: Shards
-        Module: {fileID: -1104508840086078555}
-    - Key: A
-      Value:
-        MemberName: Input
-        Module: {fileID: 7519185554908220344}
-    - Key: A
-      Value:
-        MemberName: Input
-        Module: {fileID: -4913940378397413306}
-    - Key: F
-      Value:
-        MemberName: Blend
-        Module: {fileID: 7476036934002900341}
-    - Key: F
-      Value:
-        MemberName: Blend
-        Module: {fileID: -1104508840086078555}
-    - Key: F
-      Value:
-        MemberName: WarpDirectionX
-        Module: {fileID: -1104508840086078555}
-    - Key: F
-      Value:
-        MemberName: WarpDirectionX
-        Module: {fileID: 7476036934002900341}
-  Rack: {fileID: 11400000}
-  Position: {x: 7, y: 0}
-  A: 1
-  B: -0.63779527
-  C: 0.13385826
-  D: 0.33858266
-  E: 0.32283464
-  F: 1
 --- !u!114 &941397718080380260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,10 +393,12 @@ MonoBehaviour:
     - InputA
     - InputB
     - InputC
+    - InputD
     values:
+    - 0.92
     - 1
-    - 1
-    - 0.215
+    - 0.5
+    - 0.095
   Connections:
     Connections:
     - Key: Output
@@ -499,11 +406,11 @@ MonoBehaviour:
         MemberName: NoiseIntensity
         Module: {fileID: -1104508840086078555}
   Rack: {fileID: 11400000}
-  Position: {x: 3, y: 1}
-  InputA: 0
-  InputB: -0.0076499926
-  InputC: 0.215
-  InputD: 0
+  Position: {x: 8, y: 1}
+  InputA: -0.96000004
+  InputB: 0.47584036
+  InputC: 0.75
+  InputD: 0.095
 --- !u!114 &2655380334720119376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,23 +436,67 @@ MonoBehaviour:
       Value:
         MemberName: Input
         Module: {fileID: -6024961737359441673}
-    - Key: OutputB
+    - Key: OutputA
       Value:
         MemberName: Input
-        Module: {fileID: 7493126980358868449}
-    - Key: OutputB
+        Module: {fileID: 138706814640463318}
+    - Key: OutputA
       Value:
         MemberName: Input
         Module: {fileID: 4907319480563074489}
     - Key: OutputA
       Value:
         MemberName: Input
-        Module: {fileID: 138706814640463318}
+        Module: {fileID: 7493126980358868449}
+    - Key: OutputB
+      Value:
+        MemberName: InputB
+        Module: {fileID: 941397718080380260}
+    - Key: OutputA
+      Value:
+        MemberName: InputC
+        Module: {fileID: 941397718080380260}
+    - Key: OutputB
+      Value:
+        MemberName: NoiseScaleX
+        Module: {fileID: -1104508840086078555}
+    - Key: OutputA
+      Value:
+        MemberName: InputA
+        Module: {fileID: 4344757424898022679}
   Rack: {fileID: 11400000}
-  Position: {x: 12, y: 0}
+  Position: {x: 13, y: 0}
   NameA: PositiveEnergyMax
   NameB: NegativeEnergyMax
   NameC: 
+--- !u!114 &2809200698801619530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - InputA
+    - Name
+    values:
+    - -1
+    - Noise
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: InputA
+        Module: {fileID: 941397718080380260}
+  Rack: {fileID: 11400000}
+  Position: {x: 9, y: 0}
+  Name: Noise
 --- !u!114 &2990465898901774050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,14 +524,10 @@ MonoBehaviour:
     Connections:
     - Key: TrackA-Saw
       Value:
-        MemberName: WarpDirectionY
-        Module: {fileID: 7476036934002900341}
-    - Key: TrackA-Saw
-      Value:
         MemberName: InputA
         Module: {fileID: -9166795714652657825}
   Rack: {fileID: 11400000}
-  Position: {x: 3, y: 0}
+  Position: {x: 7, y: 0}
   Clock: 120
   TrackA:
     MemberName: TrackA
@@ -598,28 +545,6 @@ MonoBehaviour:
     MemberName: TrackD
     Module: {fileID: 2990465898901774050}
     speedIndex: 16
---- !u!114 &3243208931277705727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c487e7429646a19448dc2972c6a384bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Values:
-    keys: []
-    values: []
-  Connections:
-    Connections: []
-  Rack: {fileID: 11400000}
-  Position: {x: 10, y: 1}
-  InputA: 0
-  InputB: 0
-  InputC: 0
 --- !u!114 &4107414738853111297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,13 +565,9 @@ MonoBehaviour:
     - -1
     - 0.72
   Connections:
-    Connections:
-    - Key: Output
-      Value:
-        MemberName: Output
-        Module: {fileID: 7476036934002900341}
+    Connections: []
   Rack: {fileID: 11400000}
-  Position: {x: 9, y: 1}
+  Position: {x: 7, y: 1}
   Input: 0
   Scale: 0.72
   Offset: -1
@@ -668,7 +589,7 @@ MonoBehaviour:
     - InputB
     values:
     - 1
-    - 1
+    - 0.85
   Connections:
     Connections:
     - Key: Output
@@ -676,9 +597,9 @@ MonoBehaviour:
         MemberName: Warp
         Module: {fileID: -1104508840086078555}
   Rack: {fileID: 11400000}
-  Position: {x: 6, y: 1}
-  InputA: 0
-  InputB: 0
+  Position: {x: 4, y: 1}
+  InputA: 1
+  InputB: -0.7369706
   InputC: 0
   InputD: 0
 --- !u!114 &4907319480563074489
@@ -705,10 +626,42 @@ MonoBehaviour:
         MemberName: Input
         Module: {fileID: -1503452707104155406}
   Rack: {fileID: 11400000}
-  Position: {x: 8, y: 1}
-  Input: 0
+  Position: {x: 6, y: 1}
+  Input: 1
   Drag: 0.038399998
-  Output: 0
+  Output: 1
+--- !u!114 &5166963158486424207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+    keys:
+    - InputA
+    - Name
+    values:
+    - -1
+    - Warp
+  Connections:
+    Connections:
+    - Key: OutputA
+      Value:
+        MemberName: Scale
+        Module: {fileID: 6593341786384035197}
+    - Key: OutputA
+      Value:
+        MemberName: Scale
+        Module: {fileID: -1503452707104155406}
+  Rack: {fileID: 11400000}
+  Position: {x: 8, y: 0}
+  Name: Warp
 --- !u!114 &6593341786384035197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,8 +675,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Values:
-    keys: []
-    values: []
+    keys:
+    - Scale
+    - Offset
+    - OffsetScale
+    values:
+    - -0.1
+    - 1
+    - -0.31
   Connections:
     Connections:
     - Key: Output
@@ -731,64 +690,11 @@ MonoBehaviour:
         MemberName: InputB
         Module: {fileID: 319741485387753869}
   Rack: {fileID: 11400000}
-  Position: {x: 10, y: 0}
-  Input: 0
-  Scale: 0
-  OffsetScale: 1
-  Offset: 0
---- !u!114 &7476036934002900341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26143fc9d9d0b44f9e76a8693de42b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Values:
-    keys:
-    - ImageA
-    - ImageB
-    - Output
-    - ImageScale
-    - NoiseIntensity
-    - Blend
-    - Warp
-    - Shards
-    - WarpDirectionX
-    - WarpDirectionY
-    - Speed
-    - NoiseScaleY
-    - NoiseScaleX
-    - Glow
-    - NoiseFrequency
-    - Folder
-    values:
-    - 1
-    - 1
-    - 1
-    - 0.9399999
-    - 1
-    - 1
-    - 1
-    - 1
-    - -0.72
-    - 1
-    - 1
-    - 1
-    - 1
-    - -0.59
-    - 0.015
-    - Discount
-  Connections:
-    Connections: []
-  Rack: {fileID: 11400000}
-  Position: {x: 0, y: 0}
-  output: -0.72
-  Folder: Discount
+  Position: {x: 3, y: 0}
+  Input: 1
+  Scale: -1.3499999
+  OffsetScale: -0.93
+  Offset: 1
 --- !u!114 &7493126980358868449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,16 +713,12 @@ MonoBehaviour:
     values:
     - -0.665
   Connections:
-    Connections:
-    - Key: Output
-      Value:
-        MemberName: Input
-        Module: {fileID: -2382494296366507719}
+    Connections: []
   Rack: {fileID: 11400000}
-  Position: {x: 5, y: 1}
-  Input: 0
+  Position: {x: 3, y: 1}
+  Input: 1
   Drag: 0.042084366
-  Output: 0
+  Output: 1
 --- !u!114 &7519185554908220344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,7 +747,7 @@ MonoBehaviour:
   Input: 1
   Drag: 0.17339998
   Output: 0.99999994
---- !u!114 &7799388611649374985
+--- !u!114 &8860530022284610949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -854,71 +756,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9717891be0185c4688d0c114676b2f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 58d487cb1a565f74a88807cbebcc010d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Values:
     keys:
-    - Device
-    - Channel
+    - InputA
+    - Name
     values:
-    - node
     - 1
+    - Size
   Connections:
     Connections:
-    - Key: B
+    - Key: OutputA
       Value:
-        MemberName: Scale
-        Module: {fileID: -2382494296366507719}
-    - Key: B
-      Value:
-        MemberName: Scale
-        Module: {fileID: -133031510966334469}
-    - Key: A
-      Value:
-        MemberName: InputA
-        Module: {fileID: 102499269091515241}
-    - Key: A
-      Value:
-        MemberName: InputA
-        Module: {fileID: 941397718080380260}
-    - Key: C
-      Value:
-        MemberName: InputA
-        Module: {fileID: 4344757424898022679}
-    - Key: D
-      Value:
-        MemberName: Scale
-        Module: {fileID: -1503452707104155406}
-    - Key: C
-      Value:
-        MemberName: InputA
-        Module: {fileID: 319741485387753869}
-    - Key: D
-      Value:
-        MemberName: Scale
-        Module: {fileID: 6593341786384035197}
-    - Key: F
-      Value:
-        MemberName: ImageA
-        Module: {fileID: -1104508840086078555}
-    - Key: E
-      Value:
-        MemberName: InputA
-        Module: {fileID: 45381579453026470}
-    - Key: F
-      Value:
-        MemberName: InputB
-        Module: {fileID: 45381579453026470}
-    - Key: E
-      Value:
-        MemberName: ImageA
-        Module: {fileID: 7476036934002900341}
+        MemberName: Input
+        Module: {fileID: 7519185554908220344}
   Rack: {fileID: 11400000}
-  Position: {x: 5, y: 0}
-  A: 0
-  B: 0
-  C: 0
-  D: 0
-  E: 0.28346458
-  F: 0.27559054
+  Position: {x: 12, y: 0}
+  Name: Size
